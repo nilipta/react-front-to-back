@@ -1,19 +1,19 @@
 import React from 'react';
-import Contact from './components/001contact';
+import Contacts from './components/003contatcts';
 import Header from './components/002header';
 
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
       <Header title="Contact Manager"/>
-      <Contact name="Nilipta" email="nilipta@hotmail.com"
-        phone="9423734603"/>
-      <Contact name="Mamuni" email="mamuni@hotmail.com"
-        phone="9423734603"/>
+      <div className="container">
+        <Contacts/>
+      </div>
     </div>
   );
-}
+} 
 
 export default App;
