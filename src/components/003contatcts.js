@@ -40,9 +40,8 @@ class Contacts extends Component {
                 { contacts.map( contact => (
                     <Contact 
                     key={contact.id}
-                    name={contact.name}
-                    email={contact.email}
-                    phone={contact.phone}/> 
+                    contact={contact}
+                    /> 
                     // next plan to get rid of all keys passing ,, just pass the contact object.
                 ))}
             </div>
