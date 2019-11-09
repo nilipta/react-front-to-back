@@ -1,1 +1,1 @@
-![contact app screenshot](./public/contact app.png)
+![contact app screenshot](./public/contactApp.png)
