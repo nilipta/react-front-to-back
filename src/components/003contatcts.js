@@ -2,10 +2,6 @@ import React, { Component } from 'react';
 import Contact from './001contact';
 
 class Contacts extends Component {
-
-    // constructor() {
-    //     super();
-    //     this.state = {
         state = {
             contacts : [
                 {
@@ -28,8 +24,16 @@ class Contacts extends Component {
                 },
             ]
         }
-    //     }
-    // }                //constructor not needs to only set state 
+
+    deleteClickHandler = (id) => {
+        // console.log(id);
+        const {contacts } = this.state;
+        const newContacts = contacts.filter(contact => contact.id !== id); //filtering out the given id for delete
+
+        this.setState( {
+            contacts : newContacts
+        }) // then setting the new state
+    }
 
     render() {
 
@@ -41,7 +45,8 @@ class Contacts extends Component {
                     <Contact 
                     key={contact.id}
                     contact={contact}
-                    /> 
+                    deleteClickHandler={this.deleteClickHandler.bind(this,contact.id)}
+                    /> //iterating & passing the id to delete in parent
                 ))}
             </React.Fragment>
         )
