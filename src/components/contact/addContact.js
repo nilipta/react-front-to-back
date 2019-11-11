@@ -8,13 +8,24 @@ class AddContact extends Component {
         phone : ''
     };
 
+    onSubmit = (arg) => {
+        arg.preventDefault();
+        console.log(this.state);
+    }
+
+    onChange = (arg) => { this.setState({ [arg.target.name]: arg.target.value}); }
+    //these are not necessary as above line is doing all...
+    // onNameChange = (arg) => { this.setState({name: arg.target.value}); }
+    // onEmailChange = (arg) => { this.setState({email: arg.target.value}); }
+    // onPhoneChange = (arg) => { this.setState({phone: arg.target.value}); }
+    
     render() {
         const {name, email, phone} = this.state;
         return (
         <div className="card mb-3">
             <div className="card-header"> Add Contact </div>
             <div className="card-body">
-                <form>
+                <form onSubmit={this.onSubmit}>
                     <div className="card-group">
                         <label htmlFor="name"> Name </label>
                         <input 
@@ -23,6 +34,7 @@ class AddContact extends Component {
                             className="form-control form-control-lg"
                             placeholder="Enter Name"
                             value={name}
+                            onChange={this.onChange}
                         />
                     </div>
 
@@ -34,6 +46,7 @@ class AddContact extends Component {
                             className="form-control form-control-lg"
                             placeholder="Enter Email..."
                             value={email}
+                            onChange={this.onChange}
                         />
                     </div>
 
@@ -45,6 +58,7 @@ class AddContact extends Component {
                             className="form-control form-control-lg"
                             placeholder="Enter Phone ...."
                             value={phone}
+                            onChange={this.onChange}
                         />
                     </div>
 
