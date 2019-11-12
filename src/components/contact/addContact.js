@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Consumer } from '../../context';
+import TextInputGroup from '../layout/textInputGroup';
 import uuid from 'uuid';
 
 class AddContact extends Component {
@@ -29,10 +30,6 @@ class AddContact extends Component {
     };
 
     onChange = (arg) => { this.setState({ [arg.target.name]: arg.target.value}); }
-    //these are not necessary as above line is doing all...
-    // onNameChange = (arg) => { this.setState({name: arg.target.value}); }
-    // onEmailChange = (arg) => { this.setState({email: arg.target.value}); }
-    // onPhoneChange = (arg) => { this.setState({phone: arg.target.value}); }
     
     render() {
         const {name, email, phone} = this.state;
@@ -46,41 +43,30 @@ class AddContact extends Component {
                         <div className="card-header"> Add Contact </div>
                         <div className="card-body">
                             <form onSubmit={this.onSubmit.bind(this,dispatch)}>
-                                <div className="card-group">
-                                    <label htmlFor="name"> Name </label>
-                                    <input 
-                                        type="text"
-                                        name="name"
-                                        className="form-control form-control-lg"
-                                        placeholder="Enter Name"
-                                        value={name}
-                                        onChange={this.onChange}
-                                    />
-                                </div>
+                                <TextInputGroup 
+                                    label="Name"
+                                    name="name"
+                                    placeholder="Enter Name..."
+                                    value={name}
+                                    onChange={this.onChange}
+                                />
 
-                                <div className="card-group">
-                                    <label htmlFor="email"> Email </label>
-                                    <input 
-                                        type="email"
-                                        name="email"
-                                        className="form-control form-control-lg"
-                                        placeholder="Enter Email..."
-                                        value={email}
-                                        onChange={this.onChange}
-                                    />
-                                </div>
+                                <TextInputGroup 
+                                    label="Email"
+                                    name="email"
+                                    type="email"
+                                    placeholder="Enter Email..."
+                                    value={email}
+                                    onChange={this.onChange}
+                                />
 
-                                <div className="card-group">
-                                    <label htmlFor="phone"> Phone </label>
-                                    <input 
-                                        type="text"
-                                        name="phone"
-                                        className="form-control form-control-lg"
-                                        placeholder="Enter Phone ...."
-                                        value={phone}
-                                        onChange={this.onChange}
-                                    />
-                                </div>
+                                <TextInputGroup 
+                                    label="Phone"
+                                    name="phone"
+                                    placeholder="Enter Phone..."
+                                    value={phone}
+                                    onChange={this.onChange}
+                                />
 
                                 <input type="submit" value="Add Contact" className="btn btn-block btn-primary"/>
                             </form>
