@@ -45,6 +45,8 @@ class AddContact extends Component {
             email: '',
             phone: ''
         });
+
+        this.props.history.push('/'); //navigating to home page
     };
 
     onChange = (arg) => { this.setState({ [arg.target.name]: arg.target.value}); }
