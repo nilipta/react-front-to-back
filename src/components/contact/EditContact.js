@@ -44,6 +44,20 @@ class EditContact extends Component {
             return;
         }
 
+        //for updating contact..
+        const updContact = {
+            name,
+            email,
+            phone
+        } // es6 like name = this.name  .....
+
+        //get id from url
+        const { id } = this.props.match.params;
+
+        const res = await axios.put(`https://jsonplaceholder.typicode.com/users/${id}`, updContact);
+        dispatch({type:'UPDATE_CONTACT', payload: res.data});
+
+        //for clearing placeholders
         this.setState({
             name: '',
             email: '',
