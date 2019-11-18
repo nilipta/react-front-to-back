@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "nilipta.github.io/react-front-to-back/static/css/main.36497136.chunk.css",
-    "main.js": "nilipta.github.io/react-front-to-back/static/js/main.c995f2a3.chunk.js",
-    "main.js.map": "nilipta.github.io/react-front-to-back/static/js/main.c995f2a3.chunk.js.map",
-    "runtime-main.js": "nilipta.github.io/react-front-to-back/static/js/runtime-main.8b525533.js",
-    "runtime-main.js.map": "nilipta.github.io/react-front-to-back/static/js/runtime-main.8b525533.js.map",
-    "static/css/2.aee84c9b.chunk.css": "nilipta.github.io/react-front-to-back/static/css/2.aee84c9b.chunk.css",
-    "static/js/2.a13bdf52.chunk.js": "nilipta.github.io/react-front-to-back/static/js/2.a13bdf52.chunk.js",
-    "static/js/2.a13bdf52.chunk.js.map": "nilipta.github.io/react-front-to-back/static/js/2.a13bdf52.chunk.js.map",
-    "index.html": "nilipta.github.io/react-front-to-back/index.html",
-    "precache-manifest.2c77f3cef775a0708b197471e6fbfbc8.js": "nilipta.github.io/react-front-to-back/precache-manifest.2c77f3cef775a0708b197471e6fbfbc8.js",
-    "service-worker.js": "nilipta.github.io/react-front-to-back/service-worker.js",
-    "static/css/2.aee84c9b.chunk.css.map": "nilipta.github.io/react-front-to-back/static/css/2.aee84c9b.chunk.css.map",
-    "static/css/main.36497136.chunk.css.map": "nilipta.github.io/react-front-to-back/static/css/main.36497136.chunk.css.map"
+    "main.css": "/react-front-to-back/static/css/main.36497136.chunk.css",
+    "main.js": "/react-front-to-back/static/js/main.3f40038d.chunk.js",
+    "main.js.map": "/react-front-to-back/static/js/main.3f40038d.chunk.js.map",
+    "runtime-main.js": "/react-front-to-back/static/js/runtime-main.c982ec9e.js",
+    "runtime-main.js.map": "/react-front-to-back/static/js/runtime-main.c982ec9e.js.map",
+    "static/css/2.aee84c9b.chunk.css": "/react-front-to-back/static/css/2.aee84c9b.chunk.css",
+    "static/js/2.a13bdf52.chunk.js": "/react-front-to-back/static/js/2.a13bdf52.chunk.js",
+    "static/js/2.a13bdf52.chunk.js.map": "/react-front-to-back/static/js/2.a13bdf52.chunk.js.map",
+    "index.html": "/react-front-to-back/index.html",
+    "precache-manifest.2cac4978b846d5891cb6d593dcb4e165.js": "/react-front-to-back/precache-manifest.2cac4978b846d5891cb6d593dcb4e165.js",
+    "service-worker.js": "/react-front-to-back/service-worker.js",
+    "static/css/2.aee84c9b.chunk.css.map": "/react-front-to-back/static/css/2.aee84c9b.chunk.css.map",
+    "static/css/main.36497136.chunk.css.map": "/react-front-to-back/static/css/main.36497136.chunk.css.map"
   },
   "entrypoints": [
-    "static/js/runtime-main.8b525533.js",
+    "static/js/runtime-main.c982ec9e.js",
     "static/css/2.aee84c9b.chunk.css",
     "static/js/2.a13bdf52.chunk.js",
     "static/css/main.36497136.chunk.css",
-    "static/js/main.c995f2a3.chunk.js"
+    "static/js/main.3f40038d.chunk.js"
   ]
 }
