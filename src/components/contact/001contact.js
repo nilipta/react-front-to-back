@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import axios from 'axios';
 
@@ -14,11 +15,10 @@ class Contact extends Component {
     }
 
     onDeleteClick = async(id, dispatch) => {
-    
-    try{
-        await axios.delete(`https://jsonplaceholder.typicode.com/users/${id}`);
-        dispatch({ type: 'DELETE_CONTACT', payload: id});
-        //we are not getting anything back....so no await variable
+        try{
+            await axios.delete(`https://jsonplaceholder.typicode.com/users/${id}`);
+            dispatch({ type: 'DELETE_CONTACT', payload: id});
+            //we are not getting anything back....so no await variable
         }
         catch(e) {
             dispatch({ type: 'DELETE_CONTACT', payload: id});
@@ -43,6 +43,10 @@ class Contact extends Component {
                         style={{cursor: 'pointer'}}/> 
                         
                         <i className="fas fa-times" style={{ cursor: 'pointer', float: 'right', color: 'red'}} onClick={this.onDeleteClick.bind(this, id, dispatch)}/>
+
+                        <Link to={`contact/edit/${id}`}>
+                            <i className="fas fa-pencil-alt" style={{ cursor: 'pointer', float:'right', color:'black', marginRight:'1rem'}} />
+                        </Link>
                     </h4>
                 
                     {showContactInfo ? ( //toggling display on condition
