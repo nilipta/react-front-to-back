@@ -13,9 +13,16 @@ class Contact extends Component {
         this.setState({showContactInfo:!this.state.showContactInfo}); //toggling display
     }
 
-    onDeleteClick = (id, dispatch) => {
-        axios.delete(`https://jsonplaceholder.typicode.com/users/${id}`)
-            .then(res => dispatch({ type: 'DELETE_CONTACT', payload: id}));
+    onDeleteClick = async(id, dispatch) => {
+    
+    try{
+        await axios.delete(`https://jsonplaceholder.typicode.com/users/${id}`);
+        dispatch({ type: 'DELETE_CONTACT', payload: id});
+        //we are not getting anything back....so no await variable
+        }
+        catch(e) {
+            dispatch({ type: 'DELETE_CONTACT', payload: id});
+        } //coz this is fake API...
     }
 
     render() {
